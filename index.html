@@ -3,9 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beachside Cleaners</title>
+ <title>Beachside Cleaners</title>
+<title>Beachside Cleaners</title>
 
-  <!-- INLINE CSS – no external styles.css needed -->
+.site-logo {
+  height: 130px;
+  ...
+}
+
+.logo {
+  font-size: 2.4rem;
+}
+<style>
+  /* rest of css */
+
   <style>
     /* -----------------------------------------------------------
        GLOBAL RESET + BASE STYLES
@@ -479,8 +490,10 @@
   <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
-      <img src="logo.jpg" alt="Beachside Cleaners Logo"
-           style="height:110px; border-radius:8px; margin-right:10px;">
+      <img src="logo.jpg"
+     alt="Beachside Cleaners Logo"
+     class="site-logo">
+
       <h1 class="logo">Beachside Cleaners</h1>
 
       <nav class="nav">
