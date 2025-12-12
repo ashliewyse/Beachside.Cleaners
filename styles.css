@@ -1,15 +1,22 @@
+/* =========================
+   CSS VARIABLES
+========================= */
 :root {
   --primary: #00aaff;
   --dark: #1f2937;
   --light: #f5fcff;
 }
 
+/* =========================
+   RESET & BASE
+========================= */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
@@ -23,9 +30,11 @@ body {
   margin: auto;
 }
 
-/* HEADER */
+/* =========================
+   HEADER / NAV
+========================= */
 .header {
-  background: #fff;
+  background: #ffffff;
   border-bottom: 1px solid #ddd;
   position: sticky;
   top: 0;
@@ -68,28 +77,31 @@ body {
   color: var(--dark);
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a[aria-current="page"] {
   background: rgba(0,170,255,0.15);
   border-radius: 8px;
 }
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 12px;
-  background: var(--primary);
-  color: #fff;
-  padding: 12px 18px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 800;
-}
-
-/* CONTENT */
+/* =========================
+   SECTIONS
+========================= */
 .section {
   padding: 24px 0;
 }
 
+h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+/* =========================
+   CARDS (SERVICES / PRICING)
+========================= */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -97,13 +109,47 @@ body {
 }
 
 .card {
-  background: #fff;
+  background: #ffffff;
   padding: 16px;
   border-radius: 12px;
   border: 1px solid #ddd;
 }
 
-/* FOOTER */
+/* =========================
+   BUTTON
+========================= */
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+/* =========================
+   GALLERY (SMALL PHOTOS)
+========================= */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 140px;        /* SMALL thumbnails */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   FOOTER
+========================= */
 .footer {
   background: #111827;
   color: #e5e7eb;
@@ -112,7 +158,9 @@ body {
   margin-top: 40px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 768px) {
   .header-inner {
     flex-direction: column;
@@ -121,68 +169,10 @@ body {
 
   .nav a {
     padding: 14px;
+    margin-left: 0;
   }
-}
-/* =========================
-   GALLERY
-========================= */
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.gallery-grid figure {
-  background: #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  text-align: center;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: 180px;         
-  display: block;
-}
-
-.gallery-grid figcaption {
-  padding: 0.75rem;
-  font-size: 0.9rem;
-  color: #333;
-  background: #f7f7f7;
-}
-/* =========================
-   GALLERY FIX (FORCE SMALL)
-========================= */
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.gallery-grid figure {
-  background: #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  text-align: center;
-}
-
-.gallery-grid img {
-  width: 100%;
-  max-width: 100%;
-  height: 180px;       
-  object-fit: cover;
-  display: block;
-}
-
-.gallery-grid {
-  padding: 0.75rem;
-  font-size: 0.9rem;
-  background: #f2f2f2;
+  h1 {
+    font-size: 1.7rem;
+  }
 }
