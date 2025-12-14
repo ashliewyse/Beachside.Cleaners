@@ -4,8 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us - Beachside Cleaners</title>
+  
+  <!-- PicoCSS for clean styling -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  
+  <!-- Font for header -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
   <style>
     header.custom-header {
       background-color: #0077b6;
@@ -33,15 +41,22 @@
       margin-top: 2rem;
       font-size: 1.1rem;
     }
+
+    .contact-info i {
+      margin-right: 0.5rem;
+      color: #0077b6;
+    }
   </style>
 </head>
 <body>
 
+<!-- Header with Logo and Title -->
 <header class="custom-header">
   <img src="logo.jpg" alt="Beachside Cleaners Logo" class="logo" />
   <h1>Beachside Cleaners</h1>
 </header>
 
+<!-- Navigation Menu -->
 <nav class="container-fluid">
   <ul>
     <li><strong>Menu</strong></li>
@@ -51,35 +66,49 @@
     <li><a href="services.html">Services</a></li>
     <li><a href="tips.html">Pro Tips</a></li>
     <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html" role="button" class="contrast">Contact</a></li>
+    <li><a href="contact.html" class="secondary" role="button">Contact</a></li>
   </ul>
 </nav>
 
+<!-- Main Content -->
 <main class="container">
   <section>
     <h2>Contact Us</h2>
     <h3>We're ready when you are</h3>
 
+    <!-- Contact Form -->
     <form class="grid" onsubmit="return showConfirmation(event)">
       <input type="text" id="firstname" name="firstname" placeholder="Your Name" required />
       <input type="email" id="email" name="email" placeholder="Your Email" required />
-      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
       <p id="confirmation" style="display: none; color: green;">Message sent! Thank you!</p>
     </form>
 
-    <!-- ✅ Your Contact Info -->
+    <!-- Contact Details -->
     <div class="contact-info">
       <p><strong>Call/Text:</strong> <a href="tel:2192145610">219-214-5610</a> or <a href="tel:2192431838">219-243-1838</a></p>
       <p><strong>Email:</strong> <a href="mailto:beachsidecleanersmc@gmail.com">beachsidecleanersmc@gmail.com</a></p>
+      <p><strong>Facebook:</strong> 
+        <a href="https://www.facebook.com/beachside.cleaners.2025/" target="_blank">
+          <i class="fab fa-facebook-square"></i> Follow us on Facebook
+        </a>
+      </p>
+      <p><strong>Yelp:</strong> 
+        <a href="https://www.yelp.com/biz/beachside-cleaners-michigan-city" target="_blank">
+          <i class="fab fa-yelp"></i> Check us out on Yelp
+        </a>
+      </p>
     </div>
   </section>
 </main>
 
+<!-- Footer -->
 <footer class="container">
   <small>© 2025 Beachside Cleaners</small>
 </footer>
 
+<!-- Form Confirmation Script -->
 <script>
   function showConfirmation(event) {
     event.preventDefault();
