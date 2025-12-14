@@ -30,49 +30,48 @@
   </style>
 </head>
 <body>
-  <header class="custom-header">
-    <img src="logo.jpg" alt="Beachside Cleaners Logo" class="logo" />
-    <h1>Beachside Cleaners</h1>
-  </header>
 
-  <nav class="container-fluid">
-    <ul>
-      <li><strong>Menu</strong></li>
-    </ul>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="tips.html">Pro Tips</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html" role="button">Contact</a></li>
-    </ul>
-  </nav>
+<header class="custom-header">
+  <img src="logo.jpg" alt="Beachside Cleaners Logo" class="logo" />
+  <h1>Beachside Cleaners</h1>
+</header>
 
-  <main class="container">
-    <section>
-      <h2>Contact Us</h2>
-      <p>We’d love to hear from you. Fill out the form below and we’ll get back to you!</p>
+<nav class="container-fluid">
+  <ul>
+    <li><strong>Menu</strong></li>
+  </ul>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="tips.html">Pro Tips</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html" class="secondary" role="button">Contact</a></li>
+  </ul>
+</nav>
 
-      <form class="grid" onsubmit="return showConfirmation(event)">
-        <input type="text" id="firstname" name="firstname" placeholder="Your Name" required />
-        <input type="email" id="email" name="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" rows="4"></textarea>
-        <button type="submit">Send Message</button>
-        <p id="confirmation" style="display: none; color: green;">Message sent! Thank you!</p>
-      </form>
-    </section>
-  </main>
+<main class="container">
+  <h2>Contact Us</h2>
+  <form class="grid" onsubmit="return showConfirmation(event)">
+    <input type="text" name="firstname" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea placeholder="Your Message" rows="4"></textarea>
+    <button type="submit">Send</button>
+    <p id="confirmation" style="display: none; color: green;">Message sent! Thank you!</p>
+  </form>
+</main>
 
-  <footer class="container">
-    <small><a href="#">© 2025 Beachside Cleaners</a> • <a href="#">Privacy Policy</a></small>
-  </footer>
+<footer class="container">
+  <small>© 2025 Beachside Cleaners</small>
+</footer>
 
-  <script>
-    function showConfirmation(event) {
-      event.preventDefault();
-      document.getElementById('confirmation').style.display = 'block';
-      return false;
-    }
-  </script>
+<script>
+  function showConfirmation(event) {
+    event.preventDefault();
+    document.getElementById("confirmation").style.display = "block";
+    return false;
+  }
+</script>
+
 </body>
 </html>
+
