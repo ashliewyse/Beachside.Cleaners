@@ -69,3 +69,47 @@ header.custom-header h1 {
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
+
+/* =========================
+   CLEANING CHECKLIST TABLE
+========================= */
+.checklist-table {
+  overflow-x: auto;
+  margin-top: 1.5rem;
+}
+
+.checklist-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.checklist-table th,
+.checklist-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.checklist-table th:first-child,
+.checklist-table td:first-child {
+  text-align: left;
+}
+
+.checklist-table thead {
+  background: var(--primary);
+  color: white;
+}
+
+.checklist-table .group td {
+  background: #f5f7fa;
+  font-weight: 700;
+  text-align: left;
+}
+
+.checklist-table td {
+  font-size: 0.95rem;
+}
