@@ -104,20 +104,17 @@ header.custom-header h1 {
   color: white;
 }
 
+/* SECTION HEADERS (ALL ROOMS, KITCHEN, ETC.) */
 .checklist-table .group td {
-  background: #e6f4fb;          /* subtle blue tint */
+  background: #e6f4fb;
   font-weight: 800;
   font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   color: #005f8f;
   border-top: 2px solid #0077b6;
-}
-.checklist-table .group td {
   padding-top: 16px;
   padding-bottom: 16px;
-}
-
 }
 
 .checklist-table td {
